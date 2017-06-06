@@ -5,7 +5,7 @@ store the initial 1 and 1 value
 >
 +           c1
 
-> ++++ do three iterations       c2
+> ++++++ do three iterations       c2
 [
 
     first we copy c1 into c3 and add it to c0
@@ -15,23 +15,6 @@ store the initial 1 and 1 value
         >>> +
         << -
     ]
-
-    Then we turn c0 to ascii and output the sum it contains
-    ++++ ++++
-    [
-        < +++ +++
-        > -
-    ]
-    < .
-
-    and we go back to a number representation afterwards
-    >
-    ++++ ++++
-    [
-        < --- ---
-        > -
-    ]
-
 
     We need to swap c0 and c1 for the next loop
 
@@ -50,6 +33,31 @@ store the initial 1 and 1 value
     ]
 
 
-    < -
+    # backup c1 in c4 and prepare for printing in c5
+    <<  c1
+    [
+        >>> +   c4
+        > +     c5
+        <<<< -  c1
+    ]
+
+
+    # print what is in c5
+     >>>>
+    [>>+>+<<<-]>>>[<<<+>>>-]<<+>[<->[>++++++++++<[->-[>+>>]>[+[-<+>]>+>>]<<<<<]>[-]
+      ++++++++[<++++++>-]>[<<+>>-]>[<<+>>-]<<]>]<[->>++++++++[<++++++>-]]<[.[-]<]<
+
+    # clear c5 for future iteration
+    [ - ]
+
+    # copy value from c4 back into c1
+    <
+    [
+        <<< +
+        >>> -
+    ]
+
+
+    << -
 ]
 
