@@ -50,6 +50,15 @@ store the initial 1 and 1 value
     # clear c5 for future iteration
     [ - ]
 
+    # print a space using c5 and c6 (using 4 * 8 == 32 which is the ascii value of space)
+    ++++
+    [
+        > ++++ ++++
+        < -
+    ]
+    > .
+    [-] < [-]
+
     # copy value from c4 back into c1
     <
     [
